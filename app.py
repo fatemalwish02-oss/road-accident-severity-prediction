@@ -9,6 +9,23 @@ st.set_page_config(
     page_icon="🚗",
     layout="wide"
 )
+import streamlit_authenticator as stauth
+
+authenticator = stauth.Authenticate(
+    st.secrets["credentials"],
+    st.secrets["cookie"]["name"],
+    st.secrets["cookie"]["key"],
+    st.secrets["cookie"]["expiry_days"],
+)
+
+authenticator.login(location="main")
+
+if st.session_state.get("authentication_status") is not True:
+    st.title("🚗 Road Accident Severity Prediction")
+    st.subheader("Please log in to access the dashboard")
+    st.stop()
+
+authenticator.logout(location="sidebar")
 
 st.title("🚗 Road Accident Severity Prediction")
 st.subheader("Machine Learning Based Accident Severity Analysis")
