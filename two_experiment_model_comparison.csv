@@ -1,0 +1,11 @@
+Experiment,Model,Accuracy (%),Macro F1-score (%)
+After-accident,XGBoost,49.0,37.53
+After-accident,Logistic Regression,41.01,36.8
+After-accident,Decision Tree,39.17,32.67
+After-accident,Random Forest,46.7,32.34
+After-accident,Gradient Boosting,47.16,32.32
+Before-accident,Decision Tree,42.09,33.64
+Before-accident,Logistic Regression,37.48,30.54
+Before-accident,XGBoost,45.31,30.14
+Before-accident,Random Forest,47.62,28.82
+Before-accident,Gradient Boosting,45.93,27.43
